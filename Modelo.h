@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 using namespace std;
 template <class T>
 class Suma {
@@ -14,6 +15,8 @@ public:
 	T sumaNumeros();
 	T restaNumeros();
 	T divisionNumeros();
+	T multiplicacionNumeros();
+	T potenciaNumeros();
 	T getN1() { return n1; }
 	T getN2() { return n2; }
 	void setN1(T _n1) { n1 = _n1; }
@@ -46,3 +49,13 @@ template <class T>
 			return n1/n2;
 		}	
 	}	
+
+template <class T>
+T Suma<T>::multiplicacionNumeros() {
+	return n1 * n2;
+}
+
+template <class T>
+T Suma<T>::potenciaNumeros() {
+	return pow(n1,n2);
+}
