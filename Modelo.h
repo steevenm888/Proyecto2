@@ -12,6 +12,8 @@ private:
 public:
 	Suma(T, T);
 	T sumaNumeros();
+	T restaNumeros();
+	T divisionNumeros();
 	T getN1() { return n1; }
 	T getN2() { return n2; }
 	void setN1(T _n1) { n1 = _n1; }
@@ -29,3 +31,18 @@ T Suma<T>::sumaNumeros() {
 	return n1 + n2;
 }
 
+template <class T>
+	T Suma<T>::restaNumeros(){
+		return n1-n2;
+	}
+
+template <class T>
+	T Suma<T>::divisionNumeros(){
+		if (n2==0){
+			return n2/n1;
+		}
+		else
+		{
+			return n1/n2;
+		}	
+	}	
